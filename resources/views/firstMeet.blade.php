@@ -19,7 +19,7 @@
       <a href="https://kompas.tv" target="_self">Kompas TV</a> |
       <a href="#">Di halaman ini</a>
     </p>
-    <!--cara inline-spesifik-->
+    <!--inline-spesifik-->
     <h2 style="color: #1609c7">
       Bantu Adaptasi Mahasiswa Baru, ITS Gelar Mentoring Agama Islam
     </h2>
