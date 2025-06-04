@@ -1,0 +1,31 @@
+body {
+    font-family: Lato;
+    background-color: lightblue;
+    color: #0b0835;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+p {
+    text-decoration: solid;
+}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+a:hover {
+    color: blueviolet;
+    text-decoration: solid;
+    font-weight: bold;
+}
+a:visited {
+    color: red;
+    text-decoration: none;
+}
+
+.kalimatpembuka {
+    font-size: xx-large;
+    border: chocolate;
+    border-radius: 50px;
+}

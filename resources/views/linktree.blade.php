@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>atmajamgm.wuling</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style-linktree.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div
+      class="container my-5 d-flex flex-column align-items-center text-center"
+    >
+      <header class="mb-4">
+        <img
+          src="lnktr-img/wuling-logo.webp"
+          class="logo rounded-circle mb-3"
+          alt="Logo Wuling"
+        />
+        <h4 class="fw-bold text-white">@atmajamgm.wuling</h4>
+      </header>
+
+      <nav>
+        <ul
+          class="nav nav-pills d-flex justify-content-center fw-bold"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-links-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#pills-links"
+              type="button"
+              role="tab"
+              aria-controls="pills-links"
+              aria-selected="true"
+            >
+              Links
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-shop-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#pills-shop"
+              type="button"
+              role="tab"
+              aria-controls="pills-shop"
+              aria-selected="false"
+            >
+              Shop
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <main class="tab-content w-100 text-center mt-4" id="pills-tabContent">
+        <section
+          class="tab-pane fade show active"
+          id="pills-links"
+          role="tabpanel"
+          aria-labelledby="pills-links-tab"
+        >
+          <div class="container-content">
+            <a href="#pills-shop" id="toShopTab">
+              <div class="container-links">
+                <div class="row p-3">
+                  <div class="col-4 p-1">
+                    <img
+                      src="lnktr-img/1.webp"
+                      alt=""
+                      class="img-fluid rounded-4"
+                    />
+                  </div>
+                  <div class="col-4 p-1">
+                    <img
+                      src="lnktr-img/2.webp"
+                      alt=""
+                      class="img-fluid rounded-4"
+                    />
+                  </div>
+                  <div class="col-4 p-1">
+                    <img
+                      src="lnktr-img/3.webp"
+                      alt=""
+                      class="img-fluid rounded-4"
+                    />
+                  </div>
+                </div>
+
+                <p class="fw-bold mb-0">See full shop</p>
+                <p class="fw-light small">22 Products</p>
+              </div>
+            </a>
+
+            <a
+              href="https://www.instagram.com/atmaja.mgm/profilecard/?igsh=MWVqc2kyejl0OTZl"
+              class="text-white text-decoration-none fw-bold d-block"
+            >
+              <div class="container-links">
+                Instagram
+                <button
+                  aria-label="Share link"
+                  class="position-absolute top-50 end-0 translate-middle-y flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-0"
+                >
+                  <i class="bi bi-three-dots-vertical fs-6"></i>
+                </button>
+              </div>
+            </a>
+
+            <a
+              href="https://api.whatsapp.com/send/?phone=6285803733100&text&type=phone_number&app_absent=0"
+              class="text-white text-decoration-none fw-bold"
+            >
+              <div class="container-links">
+                Share on Whatsapp
+                <button
+                  aria-label="Share link"
+                  class="position-absolute top-50 end-0 translate-middle-y flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-0"
+                >
+                  <i class="bi bi-three-dots-vertical fs-6"></i>
+                </button>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section
+          class="tab-pane fade"
+          id="pills-shop"
+          role="tabpanel"
+          aria-labelledby="pills-shop-tab"
+        >
+          <div class="container-content">
+            <form class="container">
+              <div
+                class="container d-flex align-items-center justify-content-evenly bg-white border border-4 rounded-5"
+              >
+                <!-- Ikon Kaca Pembesar -->
+                <i class="bi bi-search text-secondary fs-6"></i>
+
+                <!-- Input Pencarian -->
+                <input
+                  type="text"
+                  class="bg-transparent px-3 py-3 border-0 focus w-100"
+                  placeholder="Search atmajamgm.wuling's products"
+                  value=""
+                />
+              </div>
+            </form>
+
+            <main class="container mt-4">
+              <div class="row">
+                <!--Cell 1-->
+                <a
+                  href="https://www.whatsapp.com/product/8861722100605446/6285803733100/?app_absent=0"
+                  class="col d-block container-shop position-relative"
+                  target="_blank"
+                >
+                  <img src="lnktr-img/1.webp" alt="mobil-1" class="img-shop" />
+                  <p class="mt-4">
+                    ANGSURAN 160.000 / hari from Atmaja - MGM on WhatsApp.
+                  </p>
+                  <button
+                    aria-label="Share link"
+                    class="position-absolute bottom-0 end-0 translate-middle-y flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-0"
+                  >
+                    <i class="bi bi-three-dots-vertical fs-6"></i>
+                  </button>
+                </a>
+
+                <!--Cell 2-->
+                <a
+                  href="https://www.whatsapp.com/product/8936875593074550/6285803733100/?app_absent=0"
+                  class="col d-block container-shop position-relative"
+                  target="_blank"
+                >
+                  <img src="lnktr-img/2.webp" alt="mobil-2" class="img-shop" />
+                  <p class="mt-4">
+                    Pajak Mobil 150rb-an per Tahun from Atmaja - MGM on
+                    WhatsApp.
+                  </p>
+                  <button
+                    aria-label="Share link"
+                    class="position-absolute bottom-0 end-0 translate-middle-y flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-0"
+                  >
+                    <i class="bi bi-three-dots-vertical fs-6"></i>
+                  </button>
+                </a>
+              </div>
+
+              <div class="row">
+                <!--Cell 3-->
+                <a
+                  href="https://www.whatsapp.com/product/29471958202403457/6285803733100/?app_absent=0"
+                  class="col d-block container-shop position-relative"
+                  target="_blank"
+                >
+                  <img src="lnktr-img/3.webp" alt="mobil-3" class="img-shop" />
+                  <p class="mt-4">
+                    AIR EV LITE RANGE 300 KM from Atmaja - MGM on WhatsApp.
+                  </p>
+                  <button
+                    aria-label="Share link"
+                    class="position-absolute bottom-0 end-0 translate-middle-y flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-0"
+                  >
+                    <i class="bi bi-three-dots-vertical fs-6"></i>
+                  </button>
+                </a>
+
+                <!--Cell 4-->
+                <a
+                  href="https://www.whatsapp.com/product/9259257590817055/6285803733100/?app_absent=0"
+                  class="col d-block container-shop position-relative"
+                  target="_blank"
+                >
+                  <img src="lnktr-img/4.jpeg" alt="mobil-4" class="img-shop" />
+                  <p class="mt-4">
+                    AIR EV LITE Range 300 Km from Atmaja - MGM on WhatsApp.
+                  </p>
+                  <button
+                    aria-label="Share link"
+                    class="position-absolute bottom-0 end-0 translate-middle-y flex h-6 w-6 items-center justify-center rounded-full bg-transparent border-0"
+                  >
+                    <i class="bi bi-three-dots-vertical fs-6"></i>
+                  </button>
+                </a>
+              </div>
+            </main>
+          </div>
+        </section>
+      </main>
+
+      <a href="#" class="container-join">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 25"
+          height="16px"
+        >
+          <title>Linktree Logo</title>
+          <desc>Linktree Logo Symbol</desc>
+          <path
+            d="M13.5108 5.85343L17.5158 1.73642L19.8404 4.11701L15.6393 8.12199H21.5488V11.4268H15.6113L19.8404 15.5345L17.5158 17.8684L11.7744 12.099L6.03299 17.8684L3.70842 15.5438L7.93745 11.4361H2V8.12199H7.90944L3.70842 4.11701L6.03299 1.73642L10.038 5.85343V0H13.5108V5.85343ZM10.038 16.16H13.5108V24.0019H10.038V16.16Z"
+            fill="#000000"
+          ></path>
+        </svg>
+        <p class="fw-bold my-0">Join atmajamgm.wuling on Linktree</p>
+      </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const toShopTab = document.getElementById("toShopTab");
+      toShopTab.addEventListener("click", function (e) {
+        e.preventDefault();
+        const shopTab = new bootstrap.Tab(
+          document.getElementById("pills-shop-tab")
+        );
+        shopTab.show();
+      });
+    </script>
+    <script src="js/tabs.js"></script>
+  </body>
+</html>
