@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-	<title>Edit Pegawai</title>
+  <meta charset="UTF-8">
+  <title>Edit Pegawai</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body style="background-color: #f4f4f4;">
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Edit Pegawai</h3>
+  <div class="container mt-5">
+    <div class="card shadow-lg">
+      <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Edit Data Pegawai</h3>
+      </div>
+      <div class="card-body">
+        <a href="/pegawai" class="btn btn-secondary mb-3">← Kembali</a>
 
-	<a href="/pegawai">Kembali</a>
+        <form action="/pegawai/update" method="post">
+          {{ csrf_field() }}
+          
+          <!-- Hidden field for primary key -->
+          <input type="hidden" name="kodepegawai" value="{{ $pegawai->kodepegawai }}">
 
-	<br/>
-	<br/>
+          <div class="form-group">
+            <label for="namalengkap">Nama Lengkap</label>
+            <input type="text" class="form-control" id="namalengkap" name="namalengkap" required value="{{ $pegawai->namalengkap }}">
+          </div>
 
-	<form action="/pegawai/update" method="post">
-		{{ csrf_field() }}
+          <div class="form-group">
+            <label for="divisi">Divisi</label>
+            <input type="text" class="form-control" id="divisi" name="divisi" required value="{{ $pegawai->divisi }}">
+          </div>
 
-		{{-- Field hidden untuk identifikasi primary key --}}
-		<input type="hidden" name="kodepegawai" value="{{ $pegawai->kodepegawai }}"> <br/>
+          <div class="form-group">
+            <label for="departemen">Departemen</label>
+            <input type="text" class="form-control" id="departemen" name="departemen" required value="{{ $pegawai->departemen }}">
+          </div>
 
-		Nama Lengkap:
-		<input type="text" required="required" name="namalengkap" value="{{ $pegawai->namalengkap }}"> <br/>
-
-		Divisi:
-		<input type="text" required="required" name="divisi" value="{{ $pegawai->divisi }}"> <br/>
-
-		Departemen:
-		<input type="text" required="required" name="departemen" value="{{ $pegawai->departemen }}"> <br/>
-
-		<input type="submit" value="Simpan Data">
-	</form>
+          <button type="submit" class="btn btn-success">Simpan Data</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

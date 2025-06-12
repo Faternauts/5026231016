@@ -1,66 +1,47 @@
 @extends('template')
+
 @section('content')
 
-	<h3>Data pensil</h3>
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white">
+      <h4 class="mb-0">Form Tambah Data Pensil</h4>
+    </div>
+    <div class="card-body">
 
-	<a href="/pensil" class="btn btn-info"> Kembali</a>
+      <a href="/pensil" class="btn btn-secondary mb-3">← Kembali</a>
 
-	<br/>
-	<br/>
+      <form action="/pensil/store" method="post">
+        {{ csrf_field() }}
 
-	<form action="/pensil/store" method="post" class="form-horizontal">
-		{{ csrf_field() }}
-
-        <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="merkpensil">
-                    Merk pensil
-                </label>
-                <div class="col-sm-6">
-                    <input class="form-control"
-                           type="text"
-                           id="merkpensil"
-                           placeholder="Masukkan Merk Lengkap"
-                           name="merkpensil" required="required">
-                </div>
-        </div>
-        <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="hargapensil">
-                    Harga pensil
-                </label>
-                <div class="col-sm-6">
-                    <input class="form-control"
-                           type="text"
-                           id="hargapensil"
-                           placeholder="Masukkan Harga pensil"
-                           name="hargapensil" required="required">
-                </div>
+        <div class="form-group">
+          <label for="merkpensil">Merk Pensil</label>
+          <input type="text" class="form-control" id="merkpensil" name="merkpensil" placeholder="Masukkan Merk Lengkap" required>
         </div>
 
-        <div class="form-group has-success">
-                <label class="control-label col-sm-2" for="tersedia">
-                    Ketersediaan
-                </label>
-                <div class="col-sm-6">
-                    <select class="form-control" name="tersedia" id="tersedia" required="required">
-                        <option value="1">Tersedia</option>
-                        <option value="0">Tidak Tersedia</option>
-                    </select>
-                </div>
+        <div class="form-group">
+          <label for="hargapensil">Harga Pensil</label>
+          <input type="text" class="form-control" id="hargapensil" name="hargapensil" placeholder="Masukkan Harga Pensil" required>
         </div>
 
-		<div class="form-group has-success">
-                <label class="control-label col-sm-2" for="berat">
-                    Berat (Kg)
-                </label>
-                <div class="col-sm-6">
-                    <input class="form-control"
-                            type="number"
-                            step="0.01"
-                           id="berat"
-                           placeholder="Masukkan Berat pensil (kg)"
-                           name="berat" required="required">
-                </div>
+        <div class="form-group">
+          <label for="tersedia">Ketersediaan</label>
+          <select class="form-control" id="tersedia" name="tersedia" required>
+            <option value="1">Tersedia</option>
+            <option value="0">Tidak Tersedia</option>
+          </select>
         </div>
 
-		<input type="submit" value="Simpan Data" class="btn btn-success">
-	</form>
+        <div class="form-group">
+          <label for="berat">Berat (Kg)</label>
+          <input type="number" class="form-control" id="berat" name="berat" step="0.01" placeholder="Masukkan Berat Pensil (kg)" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Simpan Data</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+@endsection
