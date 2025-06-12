@@ -10,64 +10,38 @@
 	<br/>
 
 	<form action="/pegawai/store" method="post" class="form-horizontal">
-		{{ csrf_field() }}
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="nama">
-                {{-- for="nama" merefer ke id pada input --}}
-                Nama
-            </label>
-            <div class="col-sm-6">
-                <input class="form-control"
-                    type="text"
-                    id="nama"
-                    placeholder="Masukkan nama lengkap"
-                    name="nama" required="required">
-            </div>
-        </div>
+    {{ csrf_field() }}
 
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="jabatan">
-                {{-- for="nama" merefer ke id pada input --}}
-                Jabatan
-            </label>
-            <div class="col-sm-6">
-                <input class="form-control"
-                    type="text"
-                    id="jabatan"
-                    placeholder="Masukkan jabatan saat ini"
-                    name="jabatan" required="required">
-            </div>
+    <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="kodepegawai">Kode Pegawai</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" id="kodepegawai" name="kodepegawai" placeholder="Masukkan kode pegawai" required>
         </div>
+    </div>
 
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="umur">
-                {{-- for="nama" merefer ke id pada input --}}
-                Umur
-            </label>
-            <div class="col-sm-6">
-                <input class="form-control"
-                    type="text"
-                    id="umur"
-                    placeholder="Masukkan umur"
-                    name="umur" required="required">
-            </div>
+    <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="namalengkap">Nama Lengkap</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" id="namalengkap" name="namalengkap" placeholder="Masukkan nama lengkap" required>
         </div>
+    </div>
 
-        <div class="form-group has-success">
-            <label class="control-label col-sm-2" for="alamat">
-                {{-- for="nama" merefer ke id pada input --}}
-                Alamat
-            </label>
-            <div class="col-sm-6">
-                <textarea class="form-control"
-                    type="text"
-                    id="alamat"
-                    placeholder="Masukkan  lengkap dan kota"
-                    name="alamat" required="required">
-                </textarea>
-            </div>
+    <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="divisi">Divisi</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" id="divisi" name="divisi" placeholder="Masukkan divisi" required>
         </div>
-		<input type="submit" value="Simpan Data" class="btn btn-success">
-	</form>
+    </div>
+
+    <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="departemen">Departemen</label>
+        <div class="col-sm-6">
+            <input class="form-control" type="text" id="departemen" name="departemen" placeholder="Masukkan departemen" required>
+        </div>
+    </div>
+
+    <input type="submit" value="Simpan Data" class="btn btn-success">
+</form>
+
 
 @endsection

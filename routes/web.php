@@ -20,7 +20,7 @@ use App\Http\Controllers\KaryawanController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('template');
 });
 
 
@@ -110,13 +110,13 @@ Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 //TUGAS CRUD (pensil)
 //ROUTE TUGAS CRUD
 
-Route::get('/tugasCRUD', [PensilController::class, 'index']);
-Route::get('/tugasCRUD/tambah', [PensilController::class, 'tambah']);
-Route::post('/tugasCRUD/store', [PensilController::class, 'store']);
-Route::get('/tugasCRUD/edit/{id}', [PensilController::class, 'edit']);
-Route::post('/tugasCRUD/update', [PensilController::class, 'update']);
-Route::get('/tugasCRUD/hapus/{id}', [PensilController::class, 'hapus']);
-Route::get('/tugasCRUD/cari', [PensilController::class, 'cari']);
+Route::get('/pensil',[PensilController::class,'pensil']);
+Route::get('/pensil/tambah',[PensilController::class,'tambah']);
+Route::post('/pensil/store',[PensilController::class,'store']);
+Route::get('/pensil/edit/{id}',[PensilController::class,'edit']);
+Route::post('/pensil/update',[PensilController::class,'update']);
+Route::get('/pensil/hapus/{id}',[PensilController::class,'hapus']);
+Route::get('/pensil/cari',[PensilController::class,'cari']);
 
 
 

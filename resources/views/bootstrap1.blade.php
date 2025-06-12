@@ -17,6 +17,10 @@
     <title>Bootstrap 1</title>
   </head>
   <body>
-    <div class="container"></div>
-  </body>
+  <div class="container mt-5">
+    <h1 class="text-center">Selamat Datang!</h1>
+    <p class="text-center">Ini halaman Bootstrap pertama kamu.</p>
+    <a href="#" class="btn btn-primary d-block mx-auto" style="width: 200px;">Klik Saya</a>
+  </div>
+</body>
 </html>

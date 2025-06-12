@@ -7,61 +7,54 @@ use Illuminate\Support\Facades\DB;
 
 class PensilController extends Controller
 {
-    public function index()
+    public function pensil()
     {
-        // Mengambil data dari tabel pensil
-        $pensil = DB::table('pensil')->paginate(10);
-
-        // Mengarah ke view home_pensil.blade.php
-        return view('home_pensil', ['pensil' => $pensil]);
+        $data = DB::table('pensil')->paginate(10);
+        return view('pensil', ['pensil' => $data]);
     }
 
     public function tambah()
     {
-        return view('pensil.tambah'); // Tetap gunakan folder pensil
+        return view('tambahpensil');
     }
 
     public function store(Request $request)
     {
         DB::table('pensil')->insert([
-            'pensil_id' => $request->pensil_id,
-            'merk' => $request->merk,
-            'price' => $request->price,
-            'availability' => $request->availability,
-            'weight' => $request->weight
+            'merkpensil'  => $request->merkpensil,
+            'hargapensil' => $request->hargapensil,
+            'tersedia'    => $request->tersedia,
+            'berat'       => $request->berat
         ]);
 
-        return redirect('/tugasCRUD')->with('success', 'Data berhasil ditambahkan!');
+        return redirect('/pensil')->with('success', 'Data pensil berhasil ditambahkan!');
     }
 
     public function edit($id)
     {
-        $pensil = DB::table('pensil')->where('pensil_id', $id)->first();
+        $pensil = DB::table('pensil')
+            ->where('id_pensil', $id)
+            ->first();
 
-        if (!$pensil) {
-            abort(404);
-        }
-
-        return view('pensil.edit', ['pensil' => $pensil]);
+        return view('editpensil', ['pensil' => $pensil]);
     }
 
     public function update(Request $request)
     {
-        DB::table('pensil')->where('pensil_id', $request->pensil_id)->update([
-            'merk' => $request->merk,
-            'price' => $request->price,
-            'availability' => $request->availability,
-            'weight' => $request->weight
+        DB::table('pensil')->where('id_pensil', $request->id)->update([
+            'merkpensil'  => $request->merkpensil,
+            'hargapensil' => $request->hargapensil,
+            'tersedia'    => $request->tersedia,
+            'berat'       => $request->berat
         ]);
 
-        return redirect('/tugasCRUD')->with('success', 'Data berhasil diperbarui!');
+        return redirect('/pensil')->with('success', 'Data pensil berhasil diperbarui!');
     }
 
     public function hapus($id)
     {
-        DB::table('pensil')->where('pensil_id', $id)->delete();
-
-        return redirect('/tugasCRUD')->with('success', 'Data berhasil dihapus!');
+        DB::table('pensil')->where('id_pensil', $id)->delete();
+        return redirect('/pensil')->with('success', 'Data pensil berhasil dihapus!');
     }
 
     public function cari(Request $request)
@@ -69,11 +62,9 @@ class PensilController extends Controller
         $cari = $request->cari;
 
         $pensil = DB::table('pensil')
-            ->where('merk', 'like', "%" . $cari . "%")
-            ->paginate(10)
-            ->appends($request->all());
+            ->where('merkpensil', 'like', "%" . $cari . "%")
+            ->paginate();
 
-        // Tetap arahkan ke view home_pensil
-        return view('home_pensil', ['pensil' => $pensil]);
+        return view('pensil', ['pensil' => $pensil]);
     }
 }
