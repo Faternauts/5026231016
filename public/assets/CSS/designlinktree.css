@@ -1,0 +1,95 @@
+body {
+  background-color: #fcfade;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 22px;
+}
+
+.topbar {
+  width: 100%;
+  max-width: 580px;
+  border-radius: 8px;
+  position: fixed;
+  transition: opacity 0.3s ease;
+}
+
+.topbar:hover {
+  opacity: 0.8;
+}
+
+.topbar.fade-out {
+  opacity: 0;
+}
+
+.centered-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.medsos {
+  padding-right: 8px;
+  padding-left: 8px;
+  color: black;
+  transition: transform 0.2s ease;
+  transform-origin: center center;
+}
+
+.medsos:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+a.layanan {
+  transition: transform 0.3s ease;
+  color: black;
+  border: 1px solid #bebebe;
+  border-radius: 30px;
+  margin-top: 16px;
+  text-decoration: none;
+}
+
+a.layanan:hover {
+  transform: scale(1.06);
+  color: black;
+  text-decoration: none;
+}
+
+a.layanan i {
+  color: #bebebe;
+}
+
+a.layanan i:hover {
+  color: black;
+}
+
+.service_desc {
+  max-width: 400;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0px;
+}
+
+a.linktree {
+  text-decoration: none;
+  color: black;
+  background-color: #ffffffbf;
+  border: 1px solid #ffffffbf;
+  border-radius: 50px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+a.linktree:hover {
+  text-decoration: none;
+  color: black;
+}

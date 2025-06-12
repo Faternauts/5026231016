@@ -1,0 +1,33 @@
+body {
+  background-color: lightblue;
+  color: rgb(38, 48, 160);
+  margin-left: 200px;
+  margin-right: 200px;
+  font-family: Inter;
+}
+
+p {
+  text-decoration: solid;
+}
+
+a:link {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(219, 237, 16);
+  text-decoration: solid;
+  font-weight: bold;
+}
+
+a:visited {
+  color: rgb(226, 43, 183);
+  text-decoration: none;
+}
+
+.kalimatpembuka {
+  font-size: x-large;
+  border: chocolate;
+  border-radius: 50px;
+}

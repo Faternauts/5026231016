@@ -1,0 +1,11 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.gambar-logo {
+  width: 60px; /* Sesuaikan ukuran gambar */
+  height: 60px; /* Pastikan tinggi dan lebar sama untuk bentuk lingkaran */
+  border: 2px solid black; /* Atur warna dan ketebalan garis luar */
+  border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+  object-fit: cover; /* Menjaga proporsi gambar */
+}
