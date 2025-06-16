@@ -15,56 +15,61 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" crossorigin="anonymous">
 
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e3f2fd);
-    }
-.jumbotron {
-  background: linear-gradient(135deg, #56ccf2, #2f80ed);
-  color: white;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0; /* HILANGKAN JARAK DARI BAWAH */
-}
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+  }
 
-    .jumbotron h1 {
-      font-weight: 700;
-      font-size: 1.8rem;
-    }
+  .jumbotron {
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+    color: white;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
+  }
 
-.navbar {
-  margin-top: 0; /* PASTIKAN NAVBAR NOL JARAK ATAS */
-  background: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
+  .jumbotron h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
 
-    .navbar-nav .nav-link {
-      color: #333;
-      font-weight: 500;
-      padding: 10px 15px;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
+  .navbar {
+    margin-top: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
 
-    .navbar-nav .nav-link:hover {
-      background: linear-gradient(135deg, #2f80ed, #56ccf2);
-      color: white !important;
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
-    }
+  .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    min-width: 130px;         /* Tambahan: seragamkan ukuran tombol */
+    text-align: center;       /* Tambahan: agar teks di tengah */
+    display: inline-block;    /* Tambahan: agar layout tetap rapi */
+  }
 
-    .container {
-      margin-top: 20px;
-      background: white;
-      border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    }
-  </style>
+  .navbar-nav .nav-link:hover {
+    background: linear-gradient(135deg, #2f80ed, #56ccf2);
+    color: white !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+
+  .container {
+    margin-top: 20px;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  }
+</style>
+
 </head>
 
 <body>
@@ -91,10 +96,10 @@
         <a class="nav-link" href="/kodeX2"><i class="fas fa-cogs"></i> Latihan 1</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-layer-group"></i> Latihan 2</a>
+        <a class="nav-link" href="/keranjangbelanja"><i class="fas fa-layer-group"></i> Latihan 2</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-puzzle-piece"></i> Latihan 3</a>
+        <a class="nav-link" href="/latihan3"><i class="fas fa-puzzle-piece"></i> Latihan 3</a>
       </li>
     </ul>
   </nav>
