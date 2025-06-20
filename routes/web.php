@@ -121,27 +121,32 @@ Route::get('/pensil/hapus/{id}',[PensilController::class,'hapus']);
 Route::get('/pensil/cari',[PensilController::class,'cari']);
 
 
-
-//TUGAS LATIHAN PRIA GENAP
+//TUGAS LATIHAN 
 //Route index_karyawan
-Route::get('/kodeX2', [KaryawanController::class, 'index'])->name('karyawan.index');
-
-// Route untuk menampilkan form tambah
+Route::get('/kodeX2', [KaryawanController::class, 'index']);
 Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah'])->name('karyawan.tambah');
-
-// Route untuk memproses data dari form tambah
-Route::post('/karyawan/store', [KaryawanController::class, 'store'])->name('karyawan.store');
-
-//Route untuk hapus data
+Route::get('/karyawan/store', [KaryawanController::class, 'store'])->name('karyawan.store');
 Route::get('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'hapus'])->name('karyawan.hapus');
 
 //Latihan 2 (Keranjang Belanja) LATIHAN PEREMPUAN
 Route::get('/keranjangbelanja', [KeranjangBelanjaDBController::class, 'index']);
+Route::get('/keranjangbelanja/beli', [KeranjangBelanjaDBController::class, 'beli'])->name('keranjang.beli');
+Route::get('/keranjangbelanja/store', [KeranjangBelanjaDBController::class, 'store'])->name('keranjang.store');
+Route::get('/keranjangbelanja/batal/{ID}', [KeranjangBelanjaDBController::class, 'batal'])->name('keranjang.batal');
 
-Route::get('/keranjangbelanja/beli', [KeranjangBelanjaDBController::class, 'beli']);
-Route::post('/keranjangbelanja/store', [KeranjangBelanjaDBController:: class, 'store']);
+// Route CRUD data pagecounterAdd 
+Route::get('/traffic', [TrafficController::class, 'index'])->name('traffic.index');
 
-Route::get('/keranjangbelanja/batal/{ID}', [KeranjangBelanjaDBController:: class, 'batal']);
 
-// Route CRUD data pagecounterAdd commentMore actions
-Route::get('/latihan3', [TrafficController::class, 'index']);
+
+Route::get('/pensil', [PensilController::class, 'pensil']);
+Route::get('/pensil/tambah', [PensilController::class, 'tambah']);
+Route::get('/pensil/store', [PensilController::class, 'store']);
+Route::get('/pensil/edit/{id}', [PensilController::class, 'edit']);
+Route::get('/pensil/update', [PensilController::class, 'update']);
+Route::get('/pensil/hapus/{id}', [PensilController::class, 'hapus']);
+Route::get('/pensil/cari', [PensilController::class, 'cari']);
+
+use App\Http\Controllers\LogActivityController;
+
+Route::get('/logactivity', [LogActivityController::class, 'index'])->name('logactivity.index');

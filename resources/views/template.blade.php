@@ -90,7 +90,7 @@
         <a class="nav-link" href="/pensil"><i class="fas fa-edit"></i> Tugas CRUD</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-laptop-code"></i> EAS</a>
+        <a class="nav-link" href="/logactivity"><i class="fas fa-laptop-code"></i> EAS</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/kodeX2"><i class="fas fa-cogs"></i> Latihan 1</a>
@@ -99,7 +99,7 @@
         <a class="nav-link" href="/keranjangbelanja"><i class="fas fa-layer-group"></i> Latihan 2</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/latihan3"><i class="fas fa-puzzle-piece"></i> Latihan 3</a>
+        <a class="nav-link" href="/traffic"><i class="fas fa-puzzle-piece"></i> Latihan 3</a>
       </li>
     </ul>
   </nav>

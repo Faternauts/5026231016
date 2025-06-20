@@ -10,25 +10,29 @@ class KaryawanController extends Controller
 {
     public function index()
     {
+        // Mengambil semua data karyawan (tanpa paginate)
+        $karyawan = DB::table('karyawan')->get();
 
-        $karyawan= DB::table('karyawan')->paginate(10);//get dan paginate tidak bisa dilakukan berbarengan
-
-        // mengirim data karyawan ke view index
-        return view('index_karyawan',['karyawan' => $karyawan]);
+        // Mengirim data ke view index_karyawan
+        return view('index_karyawan', ['karyawan' => $karyawan]);
     }
 
     public function tambah()
     {
-        // memanggil view tambah
+        // Menampilkan halaman tambah karyawan
         return view('tambahKaryawan');
-
     }
 
-    // method untuk insert data ke table karyawan
+    // Method untuk menyimpan data karyawan via GET
     public function store(Request $request)
     {
+        // Pastikan metode GET yang digunakan
+        if ($request->method() !== 'GET') {
+            abort(405, 'Method Not Allowed');
+        }
+
+        // Validasi input
         $validator = Validator::make($request->all(), [
-            // Cek ke tabel 'karyawan' di kolom 'kodepegawai'
             'kode' => 'required|max:5|unique:karyawan,kodepegawai',
             'nama' => 'required|max:50',
             'divisi' => 'required|max:5',
@@ -36,13 +40,12 @@ class KaryawanController extends Controller
         ]);
 
         if ($validator->fails()) {
-            // Jika validasi gagal, kembali ke halaman form dengan pesan error
             return redirect()->route('karyawan.tambah')
-                        ->withErrors($validator)
-                        ->withInput();
+                ->withErrors($validator)
+                ->withInput();
         }
 
-        // Jika validasi berhasil, baru simpan data
+        // Insert data ke database
         DB::table('karyawan')->insert([
             'kodepegawai' => $request->kode,
             'namalengkap' => strtoupper($request->nama),
@@ -53,13 +56,10 @@ class KaryawanController extends Controller
         return redirect('/kodeX2')->with('success', 'Data karyawan berhasil ditambahkan!');
     }
 
-    // method untuk hapus data karyawan
+    // Method untuk menghapus data
     public function hapus($kodepegawai)
     {
-        // menghapus data karyawan berdasarkan id yang dipilih
-        DB::table('karyawan')->where('kodepegawai',$kodepegawai)->delete();
-
-        // alihkan halaman ke halaman karyawan
+        DB::table('karyawan')->where('kodepegawai', $kodepegawai)->delete();
         return redirect('/kodeX2')->with('success', 'Data karyawan berhasil dihapus!');
     }
 }

@@ -38,6 +38,4 @@
         </tbody>
     </table>
 
-    {{ $pegawai->links() }}
-
 @endsection

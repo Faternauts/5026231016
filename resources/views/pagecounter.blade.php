@@ -1,6 +1,6 @@
-@extends('template')Add commentMore actions
-@section('content')
+@extends('template')
 
+@section('content')
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -18,7 +18,4 @@
             </div>
         </div>
     </div>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
 @endsection
